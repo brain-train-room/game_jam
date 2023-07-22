@@ -28,6 +28,9 @@
                 "y": -84.76803784991458
             }
         },
+        "example.tmx#tiny-dungeon-tileset": {
+            "scaleInEditor": 1
+        },
         "example.tmx#tiny-town": {
             "scaleInEditor": 1
         },
