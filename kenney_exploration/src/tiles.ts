@@ -4,21 +4,40 @@ export type DrawOnParams = {
   image: number | undefined;
   x: number;
   y: number;
+  flipHorizontally?: boolean;
   debug?: { x: number; y: number };
-  width?: number;
-  height?: number;
-  processed?: boolean;
 };
 
 export type Tiles = {
   drawOn: (ctx: CanvasRenderingContext2D, params: DrawOnParams) => void;
 };
 
+function flipTiles(img: HTMLImageElement) {
+  const flipped = document.createElement("canvas");
+  flipped.width = img.width;
+  flipped.height = img.height;
+  const ctx = flipped.getContext("2d")!;
+  for (let y = 0; y < 11; y += 1) {
+    for (let x = 0; x < 12; x += 1) {
+      ctx.save();
+      ctx.translate(x * 16 + 16, y * 16);
+      ctx.scale(-1, 1);
+      ctx.drawImage(img, x * 16, y * 16, 16, 16, 0, 0, 16, 16);
+      ctx.restore();
+    }
+  }
+  return flipped;
+}
+
 async function loadImage(filename: string) {
-  return new Promise<HTMLImageElement>(function (resolve, _reject) {
+  return new Promise<{
+    img: HTMLImageElement;
+    flipped: HTMLCanvasElement;
+  }>(function (resolve, _reject) {
     const img = new Image();
     img.onload = function () {
-      resolve(img);
+      const flipped = flipTiles(img);
+      resolve({ img, flipped });
     };
     img.src = filename;
   });
@@ -39,7 +58,9 @@ export async function setupTiles() {
       const sx = (idx % 12) * 16;
       const sy = (Math.floor(idx / 12) % 11) * 16;
       const imgIdx = Math.max(0, Math.min(Math.floor(idx / 12 / 11), 2));
-      const img = [town, dungeon, ski][imgIdx];
+      const imageSet = [town, dungeon, ski][imgIdx];
+      const img =
+        params.flipHorizontally !== true ? imageSet.img : imageSet.flipped;
       ctx.drawImage(img, sx, sy, 16, 16, params.x, params.y, 16, 16);
       if (params.debug) {
         const r = rng([1, 5, 3, params.debug.x, params.debug.y]);

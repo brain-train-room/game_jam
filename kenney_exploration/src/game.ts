@@ -26,9 +26,10 @@ function loadLayer(layerIdx: number) {
 
 function loadWorld() {
   const map = loadLayer(0);
-  const buildings = loadLayer(1);
-  const items = loadLayer(2);
-  return { map, buildings, items };
+  const hiddenItems = loadLayer(1);
+  const buildings = loadLayer(2);
+  const items = loadLayer(3);
+  return { map, buildings, items, hiddenItems };
 }
 
 export const runGame = ({
@@ -47,6 +48,7 @@ export const runGame = ({
   ctx.textAlign = "left";
   const player = { x: -13, y: -6 };
   let debugDrawing = false;
+  let playerFacing: "left" | "right" = "right";
   function redraw(time: DOMHighResTimeStamp) {
     ctx.clearRect(0, 0, 256, 192);
     ctx.fillStyle = "magenta";
@@ -57,6 +59,21 @@ export const runGame = ({
         const y = player.y + dy;
         tiles.drawOn(ctx, {
           image: world.map.get(toMapKey({ x, y })),
+          x: dx * 16 + 128 - 8,
+          y: dy * 16 + 96 - 8,
+          debug: debugDrawing ? { x, y } : undefined,
+        });
+      }
+    }
+    if (debugDrawing) {
+      ctx.filter = `brightness(500%)`;
+    }
+    for (let dy = -6; dy <= 6; dy += 1) {
+      for (let dx = -8; dx <= 8; dx += 1) {
+        const x = player.x + dx;
+        const y = player.y + dy;
+        tiles.drawOn(ctx, {
+          image: world.hiddenItems.get(toMapKey({ x, y })),
           x: dx * 16 + 128 - 8,
           y: dy * 16 + 96 - 8,
           debug: debugDrawing ? { x, y } : undefined,
@@ -98,7 +115,9 @@ export const runGame = ({
       image: 19 * 12 + 4,
       x: 128 - 8,
       y: 96 - 8,
+      flipHorizontally: playerFacing === "left",
     });
+    ctx.fillStyle = "blue";
     ctx.fillText(`${Math.floor(time)}ms`, 5, 20);
     requestAnimationFrame(redraw);
   }
@@ -106,6 +125,14 @@ export const runGame = ({
 
   function goto(dx: number, dy: number) {
     const to = { x: player.x + dx, y: player.y + dy };
+    if (dx < 0) {
+      playerFacing = "left";
+    } else if (dx > 0) {
+      playerFacing = "right";
+    }
+    if (world.map.get(toMapKey(to)) === undefined) {
+      return;
+    }
     if (world.buildings.get(toMapKey(to)) !== undefined) {
       return;
     }
