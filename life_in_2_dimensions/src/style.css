@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Kenney Pixel";
+  src: url("/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf");
+}
