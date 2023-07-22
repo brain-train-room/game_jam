@@ -12,7 +12,7 @@ export type Tiles = {
   drawOn: (ctx: CanvasRenderingContext2D, params: DrawOnParams) => void;
 };
 
-function flipTiles(img: HTMLImageElement) {
+function flipTiles(img: HTMLImageElement, sx: number, sy: number) {
   const flipped = document.createElement("canvas");
   flipped.width = img.width;
   flipped.height = img.height;
@@ -21,7 +21,7 @@ function flipTiles(img: HTMLImageElement) {
     for (let x = 0; x < 12; x += 1) {
       ctx.save();
       ctx.translate(x * 16 + 16, y * 16);
-      ctx.scale(-1, 1);
+      ctx.scale(sx, sy);
       ctx.drawImage(img, x * 16, y * 16, 16, 16, 0, 0, 16, 16);
       ctx.restore();
     }
@@ -32,12 +32,14 @@ function flipTiles(img: HTMLImageElement) {
 async function loadImage(filename: string) {
   return new Promise<{
     img: HTMLImageElement;
-    flipped: HTMLCanvasElement;
+    flippedHorizontal: HTMLCanvasElement;
+    flippedVertical: HTMLCanvasElement;
   }>(function (resolve, _reject) {
     const img = new Image();
     img.onload = function () {
-      const flipped = flipTiles(img);
-      resolve({ img, flipped });
+      const flippedHorizontal = flipTiles(img, -1, 1);
+      const flippedVertical = flipTiles(img, 1, -1);
+      resolve({ img, flippedHorizontal, flippedVertical });
     };
     img.src = filename;
   });
@@ -54,13 +56,28 @@ export async function setupTiles() {
       if (params.image === undefined) {
         return;
       }
-      const idx = params.image - 1;
+      let srcIdx = params.image;
+      let flipHorizontally = params.flipHorizontally === true;
+      let flipVertically = false;
+      if (srcIdx & (1 << 31)) {
+        flipHorizontally = true;
+      }
+      if (srcIdx & (1 << 30)) {
+        flipVertically = true;
+      }
+      const idx = (srcIdx = (srcIdx % (1 << 29)) - 1);
       const sx = (idx % 12) * 16;
       const sy = (Math.floor(idx / 12) % 11) * 16;
       const imgIdx = Math.max(0, Math.min(Math.floor(idx / 12 / 11), 2));
       const imageSet = [town, dungeon, ski][imgIdx];
-      const img =
-        params.flipHorizontally !== true ? imageSet.img : imageSet.flipped;
+      let img;
+      if (flipHorizontally) {
+        img = imageSet.flippedHorizontal;
+      } else if (flipVertically) {
+        img = imageSet.flippedVertical;
+      } else {
+        img = imageSet.img;
+      }
       ctx.drawImage(img, sx, sy, 16, 16, params.x, params.y, 16, 16);
       if (params.debug) {
         const r = rng([1, 5, 3, params.debug.x, params.debug.y]);
