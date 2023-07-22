@@ -38,8 +38,10 @@
             "scaleInEditor": 1
         }
     },
+    "last.exportedFilePath": "/Users/houeland/github.com/brain-train-room/game_jam/kenney_exploration/map",
     "last.imagePath": "/Users/houeland/github.com/brain-train-room/game_jam/kenney_exploration/public/kenney_tiny-ski/Tilemap",
     "map.fixedSize": false,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
