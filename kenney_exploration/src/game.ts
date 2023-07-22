@@ -1,31 +1,79 @@
 import { Keyboard } from "./keyboard";
+import { rng } from "./rng";
 import { Tiles } from "./tiles";
 
-export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingContext2D; keyboard: Keyboard; tiles: Tiles }) => {
+export const runGame = ({
+  canvas,
+  keyboard,
+  tiles,
+}: {
+  canvas: CanvasRenderingContext2D;
+  keyboard: Keyboard;
+  tiles: Tiles;
+}) => {
   //   const coinAudio = new Audio("./chiptone/coin.wav");
   const ctx = canvas;
   ctx.imageSmoothingEnabled = false;
   ctx.textAlign = "left";
-  let player_x = 0;
-  let player_y = 0;
+  const player = { x: 0, y: 0 };
+  function get_map_tile({ x, y }: { x: number; y: number }) {
+    const r = rng([23.4, 7, x, y]);
+    if (r < 0.8) {
+      return 1;
+    } else if (r < 0.97) {
+      return 2;
+    } else {
+      return 3;
+    }
+  }
+  function get_building_tile({ x, y }: { x: number; y: number }) {
+    const r = rng([y, 83.2, x]);
+    if (r < 0.97) {
+      return undefined;
+    } else if (r < 0.98) {
+      return 29;
+    } else if (r < 0.99) {
+      return 28;
+    } else {
+      return 6;
+    }
+  }
   function redraw() {
-    ctx.clearRect(0, 0, 250, 200);
-    // for (let y = 0; y < 11; y += 1) {
-    //   for (let x = 0; x < 12; x += 1) {
-    //     tiles.drawOn(ctx, { image: y * 12 + x + 1, x: (x - player_x) * 16, y: (y - player_y) * 16, debug: false });
-    //   }
-    // }
-    for (let y = 0; y < 20; y += 1) {
-      for (let x = 0; x < 20; x += 1) {
-        tiles.drawOn(ctx, { image: y * 12 + x + 1, x: (x - player_x) * 16 + 125, y: (y - player_y) * 16 + 100, debug: true });
+    ctx.clearRect(0, 0, 256, 192);
+    ctx.fillRect(0, 0, 256, 192);
+    for (let dy = -6; dy <= 6; dy += 1) {
+      for (let dx = -8; dx <= 8; dx += 1) {
+        const x = player.x + dx;
+        const y = player.y + dy;
+        tiles.drawOn(ctx, {
+          image: get_map_tile({ x, y }),
+          x: dx * 16 + 128 - 8,
+          y: dy * 16 + 96 - 8,
+          debug: { x, y },
+        });
+        tiles.drawOn(ctx, {
+          image: get_building_tile({ x, y }),
+          x: dx * 16 + 128 - 8,
+          y: dy * 16 + 96 - 8,
+          debug: { x, y },
+        });
       }
     }
+    tiles.drawOn(ctx, {
+      image: 19 * 12 + 4,
+      x: 128 - 8,
+      y: 96 - 8,
+    });
   }
   redraw();
 
   function goto(dx: number, dy: number) {
-    player_x += dx;
-    player_y += dy;
+    const to = { x: player.x + dx, y: player.y + dy };
+    if (get_building_tile(to) !== undefined) {
+      return;
+    }
+    player.x = to.x;
+    player.y = to.y;
     redraw();
   }
   keyboard.onKeyDown("ArrowLeft", () => {
