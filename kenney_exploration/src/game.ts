@@ -26,16 +26,22 @@ function loadWorld() {
   }
 
   function loadLayer(layerIdx: number) {
-    const tiles = new Map<string, { x: number; y: number; gid: number; name?: string | undefined }>();
+    const tiles = new Map<string, { x: number; y: number; gid: number; name?: string | undefined; chestType?: string | undefined }>();
     const layer = village.layers[layerIdx];
     switch (layer.type) {
       case "objectgroup":
         for (const obj of layer.objects ?? []) {
           const gid = obj.gid;
           const name = tileNames.get(gid);
+          let chestType: string | undefined;
+          for (const p of obj.properties ?? []) {
+            if (p.name === "chest") {
+              chestType = p.value;
+            }
+          }
           const x = obj.x / 16;
           const y = obj.y / 16 - 1;
-          tiles.set(toMapKey({ x, y }), { x, y, gid, name });
+          tiles.set(toMapKey({ x, y }), { x, y, gid, name, chestType });
         }
         break;
       case "tilelayer":
@@ -58,7 +64,16 @@ function loadWorld() {
   const map = loadLayer(0);
   const buildings = loadLayer(1);
   const items = loadLayer(2);
-  return { map, buildings, items };
+  const hiddenItems: typeof items = new Map();
+  for (const [key, value] of items.entries()) {
+    if (value.chestType === "forest_hidden_chest") {
+      hiddenItems.set(key, value);
+    }
+  }
+  for (const [key, value] of hiddenItems.entries()) {
+    items.delete(key);
+  }
+  return { map, buildings, items, hiddenItems };
 }
 
 export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingContext2D; keyboard: Keyboard; tiles: Tiles }) => {
@@ -97,21 +112,21 @@ export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingCo
         });
       }
     }
-    // if (debugDrawing) {
-    //   ctx.filter = `brightness(500%)`;
-    // }
-    // for (let dy = -6; dy <= 6; dy += 1) {
-    //   for (let dx = -8; dx <= 8; dx += 1) {
-    //     const x = player.x + dx;
-    //     const y = player.y + dy;
-    //     tiles.drawOn(ctx, {
-    //       image: world.hiddenItems.get(toMapKey({ x, y })),
-    //       x: dx * 16 + 128 - 8,
-    //       y: dy * 16 + 96 - 8,
-    //       debug: debugDrawing ? { x, y } : undefined,
-    //     });
-    //   }
-    // }
+    if (debugDrawing) {
+      ctx.filter = `brightness(500%)`;
+    }
+    for (let dy = -6; dy <= 6; dy += 1) {
+      for (let dx = -8; dx <= 8; dx += 1) {
+        const x = player.x + dx;
+        const y = player.y + dy;
+        tiles.drawOn(ctx, {
+          image: world.hiddenItems.get(toMapKey({ x, y }))?.gid,
+          x: dx * 16 + 128 - 8,
+          y: dy * 16 + 96 - 8,
+          debug: debugDrawing ? { x, y } : undefined,
+        });
+      }
+    }
     if (debugDrawing) {
       ctx.filter = `blur(1px)`;
     }
