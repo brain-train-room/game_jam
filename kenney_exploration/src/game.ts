@@ -8,7 +8,7 @@ function toMapKey({ x, y }: { x: number; y: number }) {
 }
 
 function loadWorld() {
-  console.log(village);
+  console.log("village", village);
   const tileNames = new Map<number, string>();
   for (const ts of village.tilesets) {
     for (const t of ts.tiles) {
@@ -26,22 +26,43 @@ function loadWorld() {
   }
 
   function loadLayer(layerIdx: number) {
-    const tiles = new Map<string, { x: number; y: number; gid: number; name?: string | undefined; chestType?: string | undefined }>();
+    const tiles = new Map<
+      string,
+      {
+        x: number;
+        y: number;
+        gid: number;
+        name?: string | undefined;
+        drawBeforeBuildings?: boolean;
+        teleporterName?: string | undefined;
+      }
+    >();
     const layer = village.layers[layerIdx];
     switch (layer.type) {
       case "objectgroup":
         for (const obj of layer.objects ?? []) {
           const gid = obj.gid;
           const name = tileNames.get(gid);
-          let chestType: string | undefined;
+          let drawBeforeBuildings = false;
+          let teleporterName = undefined;
           for (const p of obj.properties ?? []) {
-            if (p.name === "chest") {
-              chestType = p.value;
+            if (p.name === "chest" && p.value === "forest_hidden_chest") {
+              drawBeforeBuildings = true;
+            }
+            if (p.name === "stairs") {
+              teleporterName = p.value;
             }
           }
           const x = obj.x / 16;
           const y = obj.y / 16 - 1;
-          tiles.set(toMapKey({ x, y }), { x, y, gid, name, chestType });
+          tiles.set(toMapKey({ x, y }), {
+            x,
+            y,
+            gid,
+            name,
+            drawBeforeBuildings,
+            teleporterName,
+          });
         }
         break;
       case "tilelayer":
@@ -64,19 +85,18 @@ function loadWorld() {
   const map = loadLayer(0);
   const buildings = loadLayer(1);
   const items = loadLayer(2);
-  const hiddenItems: typeof items = new Map();
-  for (const [key, value] of items.entries()) {
-    if (value.chestType === "forest_hidden_chest") {
-      hiddenItems.set(key, value);
-    }
-  }
-  for (const [key, value] of hiddenItems.entries()) {
-    items.delete(key);
-  }
-  return { map, buildings, items, hiddenItems };
+  return { map, buildings, items };
 }
 
-export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingContext2D; keyboard: Keyboard; tiles: Tiles }) => {
+export const runGame = ({
+  canvas,
+  keyboard,
+  tiles,
+}: {
+  canvas: CanvasRenderingContext2D;
+  keyboard: Keyboard;
+  tiles: Tiles;
+}) => {
   const world = loadWorld();
   const player = { x: 0, y: 0 };
   let playerKey;
@@ -119,12 +139,15 @@ export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingCo
       for (let dx = -8; dx <= 8; dx += 1) {
         const x = player.x + dx;
         const y = player.y + dy;
-        tiles.drawOn(ctx, {
-          image: world.hiddenItems.get(toMapKey({ x, y }))?.gid,
-          x: dx * 16 + 128 - 8,
-          y: dy * 16 + 96 - 8,
-          debug: debugDrawing ? { x, y } : undefined,
-        });
+        const item = world.items.get(toMapKey({ x, y }));
+        if (item?.drawBeforeBuildings === true) {
+          tiles.drawOn(ctx, {
+            image: item.gid,
+            x: dx * 16 + 128 - 8,
+            y: dy * 16 + 96 - 8,
+            debug: debugDrawing ? { x, y } : undefined,
+          });
+        }
       }
     }
     if (debugDrawing) {
@@ -149,12 +172,15 @@ export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingCo
       for (let dx = -8; dx <= 8; dx += 1) {
         const x = player.x + dx;
         const y = player.y + dy;
-        tiles.drawOn(ctx, {
-          image: world.items.get(toMapKey({ x, y }))?.gid,
-          x: dx * 16 + 128 - 8,
-          y: dy * 16 + 96 - 8,
-          debug: debugDrawing ? { x, y } : undefined,
-        });
+        const item = world.items.get(toMapKey({ x, y }));
+        if (item?.drawBeforeBuildings === false) {
+          tiles.drawOn(ctx, {
+            image: item.gid,
+            x: dx * 16 + 128 - 8,
+            y: dy * 16 + 96 - 8,
+            debug: debugDrawing ? { x, y } : undefined,
+          });
+        }
       }
     }
     ctx.filter = "none";
@@ -171,7 +197,7 @@ export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingCo
   requestAnimationFrame(redraw);
 
   function goto(dx: number, dy: number) {
-    const to = { x: player.x + dx, y: player.y + dy };
+    let to = { x: player.x + dx, y: player.y + dy };
     if (dx < 0) {
       playerFacing = "left";
     } else if (dx > 0) {
@@ -182,6 +208,29 @@ export const runGame = ({ canvas, keyboard, tiles }: { canvas: CanvasRenderingCo
     }
     if (world.buildings.get(toMapKey(to)) !== undefined) {
       return;
+    }
+    function maybe_teleport() {
+      const item = world.items.get(toMapKey(to));
+      if (item && item.teleporterName !== undefined) {
+        console.log("stepped on", item);
+        for (const obj of world.items.values()) {
+          if (
+            obj.teleporterName === item.teleporterName &&
+            toMapKey(obj) != toMapKey(to)
+          ) {
+            console.log("should go to", obj);
+            return obj;
+          }
+        }
+      } else {
+        return undefined;
+      }
+      console.error("unmatched teleporter!!");
+      return undefined;
+    }
+    const teleportTo = maybe_teleport();
+    if (teleportTo) {
+      to = teleportTo;
     }
     player.x = to.x;
     player.y = to.y;
