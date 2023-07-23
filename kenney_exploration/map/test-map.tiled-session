@@ -60,6 +60,7 @@
         "example.tmx"
     ],
     "project": "test-map.tiled-project",
+    "property.type": "string",
     "recentFiles": [
         "tiny-town-tileset.tsx",
         "tiny-ski-tileset.tsx",
