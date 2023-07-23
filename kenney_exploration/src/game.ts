@@ -7,8 +7,44 @@ function toMapKey({ x, y }: { x: number; y: number }) {
   return `${x}:${y}`;
 }
 
+const CHEST_NAMES = [
+  "forest_hidden_chest",
+  "castle_top_floor_chest",
+  "dungeon_victory_chest",
+  "maze_string",
+] as const;
+type ChestName = (typeof CHEST_NAMES)[number];
+type ItemName = ChestName | "flower";
+type QuestName = "flower" | "water" | "potion";
+
+function describeItem(item: ItemName): string {
+  switch (item) {
+    case "castle_top_floor_chest":
+      return "TBD castle item";
+    case "dungeon_victory_chest":
+      return "TBD grandpa item";
+    case "flower":
+      return "Forest flower";
+    case "forest_hidden_chest":
+      return "TBD forest chest";
+    case "maze_string":
+      return "Golden string";
+  }
+}
+
+function describeQuest(quest: QuestName): string {
+  switch (quest) {
+    case "flower":
+      return "Find wild flowers";
+    case "water":
+      return "Fill cauldron with water";
+    case "potion":
+      return "TBD need potion";
+  }
+}
 const FOREST_LEFT_X = 19;
 const DUNGEON_LEFT_X = 138;
+const FLOWER_GID = 3;
 
 function loadWorld() {
   console.log("village", village);
@@ -43,11 +79,12 @@ function loadWorld() {
         x: number;
         y: number;
         gid: number;
+        baseGid: number;
         name?: string | undefined;
         drawBeforeBuildings?: boolean;
         teleporterName?: string | undefined;
         monsterName?: string | undefined;
-        chestName?: string | undefined;
+        chestName?: ChestName | undefined;
       }
     >();
     const layer = village.layers[layerIdx];
@@ -58,14 +95,21 @@ function loadWorld() {
           const baseGid = gid % (1 << 29);
           const name = tileNames.get(baseGid);
           const monsterName = monsterNames.get(baseGid);
-          let chestName: string | undefined = undefined;
+          let chestName: ChestName | undefined = undefined;
           let drawBeforeBuildings = false;
           let teleporterName = undefined;
           for (const p of obj.properties ?? []) {
             if (p.name === "chest") {
-              chestName = p.value;
-              if (p.value === "forest_hidden_chest") {
+              for (const cn of CHEST_NAMES) {
+                if (p.value === cn) {
+                  chestName = p.value;
+                }
+              }
+              if (chestName === "forest_hidden_chest") {
                 drawBeforeBuildings = true;
+              }
+              if (chestName === undefined) {
+                alert(`Undefined chest: ${JSON.stringify(p)}`);
               }
             }
             if (p.name === "stairs") {
@@ -78,6 +122,7 @@ function loadWorld() {
             x,
             y,
             gid,
+            baseGid,
             name,
             drawBeforeBuildings,
             teleporterName,
@@ -94,7 +139,8 @@ function loadWorld() {
               const y = chunk.y + h;
               const gid = chunk.data[h * chunk.width + w];
               if (gid > 0) {
-                tiles.set(toMapKey({ x, y }), { x, y, gid });
+                const baseGid = gid % (1 << 29);
+                tiles.set(toMapKey({ x, y }), { x, y, gid, baseGid });
               }
             }
           }
@@ -119,8 +165,9 @@ export const runGame = ({
   tiles: Tiles;
 }) => {
   const world = loadWorld();
-  const openedChests = new Set<string>();
   const player = { x: 0, y: 0, sightRadius: 4 };
+  let playerInventory: ItemName[] = [];
+  let playerQuests: QuestName[] = [];
   let playerKey;
   for (const [key, obj] of world.items) {
     if (obj.name === "player") {
@@ -129,9 +176,6 @@ export const runGame = ({
       playerKey = key;
     }
   }
-  // TODO debug
-  player.x = -2;
-  player.y = 11;
   if (playerKey !== undefined) {
     world.items.delete(playerKey);
   }
@@ -245,11 +289,6 @@ export const runGame = ({
       flipHorizontally: playerFacing === "left",
     });
 
-    // 6*6 + 8*8
-    // 36 + 64
-    // 100
-
-    // 4*4 ==> 16
     if (player.x >= DUNGEON_LEFT_X) {
       for (let dy = -6 * 16; dy <= 6 * 16; dy += 1) {
         for (let dx = -8 * 16; dx <= 8 * 16; dx += 1) {
@@ -268,6 +307,8 @@ export const runGame = ({
     ctx.fillText(`${Math.floor(time)}ms`, 5, 20);
     ctx.fillText(`x=${player.x} y=${player.y}`, 5, 40);
     ctx.fillText(`maze stack size ${mazeStringStack.length}`, 5, 60);
+    ctx.fillText(`inv: ${JSON.stringify(playerInventory)}`, 5, 80);
+    ctx.fillText(`qst: ${JSON.stringify(playerQuests)}`, 5, 100);
     requestAnimationFrame(redraw);
   }
   requestAnimationFrame(redraw);
@@ -279,7 +320,8 @@ export const runGame = ({
     } else if (dx > 0) {
       playerFacing = "right";
     }
-    if (world.map.get(toMapKey(to)) === undefined) {
+    const background = world.map.get(toMapKey(to));
+    if (background === undefined) {
       return;
     }
     const item = world.items.get(toMapKey(to));
@@ -292,9 +334,10 @@ export const runGame = ({
       item.gid += 2;
       item.chestName = undefined;
     }
-    if (world.buildings.get(toMapKey(to)) !== undefined) {
-      return;
-    }
+    if (to.x >= FOREST_LEFT_X && background.gid)
+      if (world.buildings.get(toMapKey(to)) !== undefined) {
+        return;
+      }
     function maybe_teleport() {
       if (item && item.teleporterName !== undefined) {
         console.log("stepped on", item);
