@@ -9,6 +9,9 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "": {
+            "scaleInEditor": 4
+        },
         "/Users/houeland/github.com/brain-train-room/game_jam/kenney_exploration/public/kenney_tiny-dungeon/Tiled/sampleMap.tmx": {
             "scale": 1.90927734375,
             "selectedLayer": 0,
@@ -21,17 +24,22 @@
             "scaleInDock": 1
         },
         "example.tmx": {
-            "scale": 2.2827,
+            "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 125.72830420116529,
-                "y": -84.76803784991458
+                "x": -59.666666666666686,
+                "y": -49
             }
         },
         "example.tmx#tiny-dungeon-tileset": {
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
+        "example.tmx#tiny-ski-tileset": {
+            "scaleInDock": 1.6482
+        },
         "example.tmx#tiny-town": {
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "tiny-dungeon-tileset.tsx": {
@@ -62,10 +70,10 @@
     "project": "test-map.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "example.tmx",
         "tiny-town-tileset.tsx",
         "tiny-ski-tileset.tsx",
         "tiny-dungeon-tileset.tsx",
-        "example.tmx",
         "/Users/houeland/github.com/brain-train-room/game_jam/kenney_exploration/public/kenney_tiny-dungeon/Tiled/sampleMap.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
