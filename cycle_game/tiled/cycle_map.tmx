@@ -459,82 +459,82 @@
   </properties>
   <object id="2" gid="3" x="238" y="-61.3333" width="50" height="50">
    <properties>
-    <property name="instance_name" value="milk bottle"/>
+    <property name="instance_name" value="Milk bottle"/>
    </properties>
   </object>
   <object id="3" gid="4" x="-155.333" y="-11.3333" width="50" height="50">
    <properties>
-    <property name="instance_name" value="parents' love"/>
+    <property name="instance_name" value="Parents' love"/>
    </properties>
   </object>
   <object id="4" gid="1" x="371.333" y="466" width="50" height="50">
    <properties>
-    <property name="instance_name" value="candy"/>
+    <property name="instance_name" value="Candy"/>
    </properties>
   </object>
   <object id="5" gid="7" x="86.6667" y="386.667" width="50" height="50">
    <properties>
-    <property name="instance_name" value="rocking horse"/>
+    <property name="instance_name" value="Rocking horse"/>
    </properties>
   </object>
   <object id="8" gid="231" x="-85.3333" y="293.333" width="50" height="50">
    <properties>
-    <property name="instance_name" value="butterfly"/>
+    <property name="instance_name" value="Butterfly"/>
    </properties>
   </object>
   <object id="9" gid="8" x="86.6667" y="39.3333" width="50" height="50">
    <properties>
-    <property name="instance_name" value="teddy bear"/>
+    <property name="instance_name" value="Teddy bear"/>
    </properties>
   </object>
   <object id="12" gid="19" x="-225.455" y="2786.55" width="50" height="50">
    <properties>
-    <property name="instance_name" value="gaming"/>
+    <property name="instance_name" value="Gaming"/>
    </properties>
   </object>
   <object id="13" gid="20" x="10.5455" y="2557.88" width="50" height="50">
    <properties>
-    <property name="instance_name" value="graduation"/>
+    <property name="instance_name" value="Graduated"/>
    </properties>
   </object>
   <object id="14" gid="21" x="389.212" y="2837.88" width="50" height="50">
    <properties>
-    <property name="instance_name" value="love letter"/>
+    <property name="instance_name" value="Love letter"/>
    </properties>
   </object>
   <object id="15" gid="22" x="315.212" y="2293.21" width="50" height="50">
    <properties>
-    <property name="instance_name" value="skateboard"/>
+    <property name="instance_name" value="Skateboard"/>
    </properties>
   </object>
   <object id="16" gid="35" x="-215.455" y="2253.88" width="50" height="50">
    <properties>
-    <property name="instance_name" value="trophy"/>
+    <property name="instance_name" value="Trophy"/>
    </properties>
   </object>
   <object id="28" gid="236" x="724" y="4100" width="50" height="50">
    <properties>
-    <property name="instance_name" value="diamond ring"/>
+    <property name="instance_name" value="Marriage"/>
    </properties>
   </object>
   <object id="29" gid="237" x="1211" y="4168" width="50" height="50">
    <properties>
-    <property name="instance_name" value="house"/>
+    <property name="instance_name" value="A house"/>
    </properties>
   </object>
   <object id="30" gid="238" x="945" y="4060" width="50" height="50">
    <properties>
-    <property name="instance_name" value="love"/>
+    <property name="instance_name" value="Love"/>
    </properties>
   </object>
   <object id="31" gid="239" x="1218" y="3986" width="50" height="50">
    <properties>
-    <property name="instance_name" value="money"/>
+    <property name="instance_name" value="Money"/>
    </properties>
   </object>
   <object id="32" gid="232" x="854" y="4242" width="50" height="50">
    <properties>
-    <property name="instance_name" value="child"/>
+    <property name="instance_name" value="A child"/>
    </properties>
   </object>
  </objectgroup>
