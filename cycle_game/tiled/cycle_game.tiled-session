@@ -63,13 +63,14 @@
         },
         "cycle_map.tmx": {
             "expandedObjectLayers": [
-                3
+                3,
+                4
             ],
             "scale": 0.75,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 2827.333333333333,
-                "y": 120.66666666666669
+                "x": 124.66666666666663,
+                "y": 104.66666666666669
             }
         },
         "cycle_map_old.tmx": {
@@ -96,10 +97,18 @@
         "cycle_tileset_old.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "tiled-tileset-map.json": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 9556.666666666666,
+                "y": 76.66666666666669
+            }
         }
     },
     "last.exportedFilePath": "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export",
-    "last.imagePath": "/Users/houeland/github.com/brain-train-room/game_jam/circular_game",
+    "last.imagePath": "/Users/houeland/github.com/brain-train-room/game_jam/circular_game/baby theme",
     "map.fixedSize": false,
     "map.height": 10,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -112,8 +121,10 @@
         "cycle_map.tmx"
     ],
     "project": "cycle_game.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
+        "cycle_tileset.tsx",
+        "tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/cycle_tileset.tsx",
         "cycle_tileset_map.tmx",
@@ -122,8 +133,7 @@
         "baby-map_old.tmx",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map_old.tmj",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/deno/tiled-tileset-map.json",
-        "cycle_map.tmx",
-        "cycle_tileset.tsx"
+        "cycle_map.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.type": 1

@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="224" columns="0">
+<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="222" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="50" height="50" source="../../circular_game/baby theme/candy_with_paper.png"/>
- </tile>
- <tile id="1">
-  <properties>
-   <property name="hidden" type="bool" value="true"/>
-  </properties>
-  <image width="50" height="50" source="../../circular_game/baby theme/climbing baby_left.png"/>
  </tile>
  <tile id="2">
   <image width="50" height="50" source="../../circular_game/baby theme/milk_bottle.png"/>
@@ -56,15 +50,9 @@
   <image width="50" height="50" source="../../circular_game/student theme/skateboard.png"/>
  </tile>
  <tile id="22">
-  <properties>
-   <property name="hidden" type="bool" value="true"/>
-  </properties>
   <image width="50" height="50" source="../../circular_game/student theme/student 2.png"/>
  </tile>
  <tile id="23">
-  <properties>
-   <property name="hidden" type="bool" value="true"/>
-  </properties>
   <image width="50" height="50" source="../../circular_game/student theme/student.png"/>
  </tile>
  <tile id="24">
@@ -664,22 +652,19 @@
  <tile id="224">
   <image width="50" height="50" source="../../circular_game/student theme/student_background/cropped/student_background_tiles_35.png"/>
  </tile>
- <tile id="225">
-  <image width="50" height="50" source="../../circular_game/baby theme/background/bottom_left_corner.png"/>
- </tile>
  <tile id="226">
   <image width="50" height="50" source="../../circular_game/baby theme/background/bottom_right_corner.png"/>
- </tile>
- <tile id="227">
-  <image width="50" height="50" source="../../circular_game/baby theme/background/top_left_corner.png"/>
- </tile>
- <tile id="228">
-  <image width="50" height="50" source="../../circular_game/baby theme/background/top_right_corner.png"/>
  </tile>
  <tile id="229">
   <image width="50" height="50" source="../../circular_game/baby theme/background/plain_white.png"/>
  </tile>
  <tile id="230">
   <image width="50" height="50" source="../../circular_game/butterfly.png"/>
+ </tile>
+ <tile id="231">
+  <image width="50" height="50" source="../../circular_game/baby theme/crawling baby_1.png"/>
+ </tile>
+ <tile id="232">
+  <image width="50" height="50" source="../../circular_game/baby theme/crawling baby_2.png"/>
  </tile>
 </tileset>
