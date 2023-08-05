@@ -67,7 +67,7 @@
                 4
             ],
             "scale": 0.75,
-            "selectedLayer": 1,
+            "selectedLayer": 3,
             "viewCenter": {
                 "x": 124.66666666666663,
                 "y": 104.66666666666669
@@ -123,8 +123,8 @@
     "project": "cycle_game.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "cycle_tileset.tsx",
         "tiled-tileset-map.json",
+        "cycle_tileset.tsx",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/cycle_tileset.tsx",
         "cycle_tileset_map.tmx",
