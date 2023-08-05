@@ -66,11 +66,11 @@
                 3,
                 4
             ],
-            "scale": 0.75,
-            "selectedLayer": 3,
+            "scale": 1,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 124.66666666666663,
-                "y": 104.66666666666669
+                "x": 1043.5,
+                "y": 4017.5
             }
         },
         "cycle_map_old.tmx": {
@@ -102,13 +102,13 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 9556.666666666666,
-                "y": 76.66666666666669
+                "x": 13815.333333333332,
+                "y": -36.66666666666663
             }
         }
     },
     "last.exportedFilePath": "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export",
-    "last.imagePath": "/Users/houeland/github.com/brain-train-room/game_jam/circular_game/baby theme",
+    "last.imagePath": "/Users/houeland/github.com/brain-train-room/game_jam/circular_game/adult theme/background/cropped",
     "map.fixedSize": false,
     "map.height": 10,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -124,6 +124,7 @@
     "property.type": "string",
     "recentFiles": [
         "tiled-tileset-map.json",
+        "cycle_map.tmx",
         "cycle_tileset.tsx",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/cycle_tileset.tsx",
@@ -132,8 +133,7 @@
         "cycle_map_old.tmx",
         "baby-map_old.tmx",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map_old.tmj",
-        "/Users/houeland/github.com/houeland/torwasm/wasmpixel/deno/tiled-tileset-map.json",
-        "cycle_map.tmx"
+        "/Users/houeland/github.com/houeland/torwasm/wasmpixel/deno/tiled-tileset-map.json"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.type": 1

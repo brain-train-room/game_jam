@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="222" columns="0">
+<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="283" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="50" height="50" source="../../circular_game/baby theme/candy_with_paper.png"/>
@@ -666,5 +666,188 @@
  </tile>
  <tile id="232">
   <image width="50" height="50" source="../../circular_game/baby theme/crawling baby_2.png"/>
+ </tile>
+ <tile id="233">
+  <image width="50" height="50" source="../../circular_game/adult theme/adult 2.png"/>
+ </tile>
+ <tile id="234">
+  <image width="50" height="50" source="../../circular_game/adult theme/adult.png"/>
+ </tile>
+ <tile id="235">
+  <image width="50" height="50" source="../../circular_game/adult theme/diamond_ring.png"/>
+ </tile>
+ <tile id="236">
+  <image width="50" height="50" source="../../circular_game/adult theme/house.png"/>
+ </tile>
+ <tile id="237">
+  <image width="50" height="50" source="../../circular_game/adult theme/love.png"/>
+ </tile>
+ <tile id="238">
+  <image width="50" height="50" source="../../circular_game/adult theme/money.png"/>
+ </tile>
+ <tile id="239">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_0.png"/>
+ </tile>
+ <tile id="240">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_1.png"/>
+ </tile>
+ <tile id="241">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_2.png"/>
+ </tile>
+ <tile id="242">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_3.png"/>
+ </tile>
+ <tile id="243">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_4.png"/>
+ </tile>
+ <tile id="244">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_1_tiles_5.png"/>
+ </tile>
+ <tile id="245">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_0.png"/>
+ </tile>
+ <tile id="246">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_1.png"/>
+ </tile>
+ <tile id="247">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_2.png"/>
+ </tile>
+ <tile id="248">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_3.png"/>
+ </tile>
+ <tile id="249">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_4.png"/>
+ </tile>
+ <tile id="250">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_2_tiles_5.png"/>
+ </tile>
+ <tile id="251">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_0.png"/>
+ </tile>
+ <tile id="252">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_1.png"/>
+ </tile>
+ <tile id="253">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_2.png"/>
+ </tile>
+ <tile id="254">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_3.png"/>
+ </tile>
+ <tile id="255">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_4.png"/>
+ </tile>
+ <tile id="256">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_5.png"/>
+ </tile>
+ <tile id="257">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_6.png"/>
+ </tile>
+ <tile id="258">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_7.png"/>
+ </tile>
+ <tile id="259">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_3_tiles_8.png"/>
+ </tile>
+ <tile id="260">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_4_tiles_0.png"/>
+ </tile>
+ <tile id="261">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_4_tiles_1.png"/>
+ </tile>
+ <tile id="289">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_0.png"/>
+ </tile>
+ <tile id="290">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_1.png"/>
+ </tile>
+ <tile id="291">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_2.png"/>
+ </tile>
+ <tile id="292">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_3.png"/>
+ </tile>
+ <tile id="293">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_4.png"/>
+ </tile>
+ <tile id="294">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_5.png"/>
+ </tile>
+ <tile id="295">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_6.png"/>
+ </tile>
+ <tile id="296">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_7.png"/>
+ </tile>
+ <tile id="297">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_8.png"/>
+ </tile>
+ <tile id="298">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_9.png"/>
+ </tile>
+ <tile id="299">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_10.png"/>
+ </tile>
+ <tile id="300">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_11.png"/>
+ </tile>
+ <tile id="301">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_12.png"/>
+ </tile>
+ <tile id="302">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_13.png"/>
+ </tile>
+ <tile id="303">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_14.png"/>
+ </tile>
+ <tile id="304">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_15.png"/>
+ </tile>
+ <tile id="305">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_16.png"/>
+ </tile>
+ <tile id="306">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_17.png"/>
+ </tile>
+ <tile id="307">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_18.png"/>
+ </tile>
+ <tile id="308">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_19.png"/>
+ </tile>
+ <tile id="309">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_20.png"/>
+ </tile>
+ <tile id="310">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_21.png"/>
+ </tile>
+ <tile id="311">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_22.png"/>
+ </tile>
+ <tile id="312">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_23.png"/>
+ </tile>
+ <tile id="313">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_24.png"/>
+ </tile>
+ <tile id="314">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_25.png"/>
+ </tile>
+ <tile id="315">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_26.png"/>
+ </tile>
+ <tile id="316">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_27.png"/>
+ </tile>
+ <tile id="317">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_28.png"/>
+ </tile>
+ <tile id="318">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_29.png"/>
+ </tile>
+ <tile id="319">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_30.png"/>
+ </tile>
+ <tile id="320">
+  <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_31.png"/>
  </tile>
 </tileset>
