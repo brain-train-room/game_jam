@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="283" columns="0">
+<tileset version="1.10" tiledversion="1.10.1" name="cycle_tileset" tilewidth="50" tileheight="50" tilecount="458" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="50" height="50" source="../../circular_game/baby theme/candy_with_paper.png"/>
@@ -849,5 +849,530 @@
  </tile>
  <tile id="320">
   <image width="50" height="50" source="../../circular_game/adult theme/background/cropped/room_6_tiles_31.png"/>
+ </tile>
+ <tile id="321">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/birthday_photo.png"/>
+ </tile>
+ <tile id="322">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/couple_photo.png"/>
+ </tile>
+ <tile id="323">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/friends_photo.png"/>
+ </tile>
+ <tile id="324">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/grammophone.png"/>
+ </tile>
+ <tile id="325">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/grandpa_2.png"/>
+ </tile>
+ <tile id="326">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/grandpa.png"/>
+ </tile>
+ <tile id="327">
+  <image width="50" height="50" source="../../circular_game/grandpa theme/plant.png"/>
+ </tile>
+ <tile id="328">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_0.png"/>
+ </tile>
+ <tile id="329">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_1.png"/>
+ </tile>
+ <tile id="330">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_2.png"/>
+ </tile>
+ <tile id="331">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_3.png"/>
+ </tile>
+ <tile id="332">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_4.png"/>
+ </tile>
+ <tile id="333">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_5.png"/>
+ </tile>
+ <tile id="334">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_6.png"/>
+ </tile>
+ <tile id="335">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_7.png"/>
+ </tile>
+ <tile id="336">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_8.png"/>
+ </tile>
+ <tile id="337">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_9.png"/>
+ </tile>
+ <tile id="338">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_10.png"/>
+ </tile>
+ <tile id="339">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_11.png"/>
+ </tile>
+ <tile id="340">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_12.png"/>
+ </tile>
+ <tile id="341">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_13.png"/>
+ </tile>
+ <tile id="342">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_14.png"/>
+ </tile>
+ <tile id="343">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_15.png"/>
+ </tile>
+ <tile id="344">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_16.png"/>
+ </tile>
+ <tile id="345">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_17.png"/>
+ </tile>
+ <tile id="346">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_18.png"/>
+ </tile>
+ <tile id="347">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_19.png"/>
+ </tile>
+ <tile id="348">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_20.png"/>
+ </tile>
+ <tile id="349">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_21.png"/>
+ </tile>
+ <tile id="350">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_22.png"/>
+ </tile>
+ <tile id="351">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_23.png"/>
+ </tile>
+ <tile id="352">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_24.png"/>
+ </tile>
+ <tile id="353">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_25.png"/>
+ </tile>
+ <tile id="354">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_26.png"/>
+ </tile>
+ <tile id="355">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_27.png"/>
+ </tile>
+ <tile id="356">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_28.png"/>
+ </tile>
+ <tile id="357">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_29.png"/>
+ </tile>
+ <tile id="358">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_30.png"/>
+ </tile>
+ <tile id="359">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_31.png"/>
+ </tile>
+ <tile id="360">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_32.png"/>
+ </tile>
+ <tile id="361">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_33.png"/>
+ </tile>
+ <tile id="362">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_34.png"/>
+ </tile>
+ <tile id="363">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_35.png"/>
+ </tile>
+ <tile id="364">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_36.png"/>
+ </tile>
+ <tile id="365">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_37.png"/>
+ </tile>
+ <tile id="366">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_38.png"/>
+ </tile>
+ <tile id="367">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_39.png"/>
+ </tile>
+ <tile id="368">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_40.png"/>
+ </tile>
+ <tile id="369">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_41.png"/>
+ </tile>
+ <tile id="370">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_42.png"/>
+ </tile>
+ <tile id="371">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_43.png"/>
+ </tile>
+ <tile id="372">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_44.png"/>
+ </tile>
+ <tile id="373">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_45.png"/>
+ </tile>
+ <tile id="374">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_46.png"/>
+ </tile>
+ <tile id="375">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_47.png"/>
+ </tile>
+ <tile id="376">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_48.png"/>
+ </tile>
+ <tile id="377">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_49.png"/>
+ </tile>
+ <tile id="378">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_50.png"/>
+ </tile>
+ <tile id="379">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_51.png"/>
+ </tile>
+ <tile id="380">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_52.png"/>
+ </tile>
+ <tile id="381">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_53.png"/>
+ </tile>
+ <tile id="382">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_54.png"/>
+ </tile>
+ <tile id="383">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_55.png"/>
+ </tile>
+ <tile id="384">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_56.png"/>
+ </tile>
+ <tile id="385">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_57.png"/>
+ </tile>
+ <tile id="386">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_58.png"/>
+ </tile>
+ <tile id="387">
+  <image width="50" height="50" source="../../circular_game/cropped/are_you_ready_tree_tiles_59.png"/>
+ </tile>
+ <tile id="388">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_0.png"/>
+ </tile>
+ <tile id="389">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_1.png"/>
+ </tile>
+ <tile id="390">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_2.png"/>
+ </tile>
+ <tile id="391">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_3.png"/>
+ </tile>
+ <tile id="392">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_4.png"/>
+ </tile>
+ <tile id="393">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_5.png"/>
+ </tile>
+ <tile id="394">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_6.png"/>
+ </tile>
+ <tile id="395">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_7.png"/>
+ </tile>
+ <tile id="396">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_8.png"/>
+ </tile>
+ <tile id="397">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_9.png"/>
+ </tile>
+ <tile id="398">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_10.png"/>
+ </tile>
+ <tile id="399">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_11.png"/>
+ </tile>
+ <tile id="400">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_12.png"/>
+ </tile>
+ <tile id="401">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_13.png"/>
+ </tile>
+ <tile id="402">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_14.png"/>
+ </tile>
+ <tile id="403">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_15.png"/>
+ </tile>
+ <tile id="404">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_16.png"/>
+ </tile>
+ <tile id="405">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_17.png"/>
+ </tile>
+ <tile id="406">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_18.png"/>
+ </tile>
+ <tile id="407">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_19.png"/>
+ </tile>
+ <tile id="408">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_20.png"/>
+ </tile>
+ <tile id="409">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_21.png"/>
+ </tile>
+ <tile id="410">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_22.png"/>
+ </tile>
+ <tile id="411">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_23.png"/>
+ </tile>
+ <tile id="412">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_24.png"/>
+ </tile>
+ <tile id="413">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_25.png"/>
+ </tile>
+ <tile id="414">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_26.png"/>
+ </tile>
+ <tile id="415">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_27.png"/>
+ </tile>
+ <tile id="416">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_28.png"/>
+ </tile>
+ <tile id="417">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_29.png"/>
+ </tile>
+ <tile id="418">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_30.png"/>
+ </tile>
+ <tile id="419">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_31.png"/>
+ </tile>
+ <tile id="420">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_32.png"/>
+ </tile>
+ <tile id="421">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_33.png"/>
+ </tile>
+ <tile id="422">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_34.png"/>
+ </tile>
+ <tile id="423">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_35.png"/>
+ </tile>
+ <tile id="424">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_36.png"/>
+ </tile>
+ <tile id="425">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_37.png"/>
+ </tile>
+ <tile id="426">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_38.png"/>
+ </tile>
+ <tile id="427">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_39.png"/>
+ </tile>
+ <tile id="428">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_40.png"/>
+ </tile>
+ <tile id="429">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_41.png"/>
+ </tile>
+ <tile id="430">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_42.png"/>
+ </tile>
+ <tile id="431">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_43.png"/>
+ </tile>
+ <tile id="432">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_44.png"/>
+ </tile>
+ <tile id="433">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_45.png"/>
+ </tile>
+ <tile id="434">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_46.png"/>
+ </tile>
+ <tile id="435">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_47.png"/>
+ </tile>
+ <tile id="436">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_48.png"/>
+ </tile>
+ <tile id="437">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_49.png"/>
+ </tile>
+ <tile id="438">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_50.png"/>
+ </tile>
+ <tile id="439">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_51.png"/>
+ </tile>
+ <tile id="440">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_52.png"/>
+ </tile>
+ <tile id="441">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_53.png"/>
+ </tile>
+ <tile id="442">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_54.png"/>
+ </tile>
+ <tile id="443">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_55.png"/>
+ </tile>
+ <tile id="444">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_56.png"/>
+ </tile>
+ <tile id="445">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_57.png"/>
+ </tile>
+ <tile id="446">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_58.png"/>
+ </tile>
+ <tile id="447">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_tiles_59.png"/>
+ </tile>
+ <tile id="448">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_0.png"/>
+ </tile>
+ <tile id="449">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_1.png"/>
+ </tile>
+ <tile id="450">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_2.png"/>
+ </tile>
+ <tile id="451">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_3.png"/>
+ </tile>
+ <tile id="452">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_4.png"/>
+ </tile>
+ <tile id="453">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_5.png"/>
+ </tile>
+ <tile id="454">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_6.png"/>
+ </tile>
+ <tile id="455">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_7.png"/>
+ </tile>
+ <tile id="456">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_8.png"/>
+ </tile>
+ <tile id="457">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_9.png"/>
+ </tile>
+ <tile id="458">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_10.png"/>
+ </tile>
+ <tile id="459">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_11.png"/>
+ </tile>
+ <tile id="460">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_12.png"/>
+ </tile>
+ <tile id="461">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_13.png"/>
+ </tile>
+ <tile id="462">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_14.png"/>
+ </tile>
+ <tile id="463">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_15.png"/>
+ </tile>
+ <tile id="464">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_16.png"/>
+ </tile>
+ <tile id="465">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_17.png"/>
+ </tile>
+ <tile id="466">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_18.png"/>
+ </tile>
+ <tile id="467">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_19.png"/>
+ </tile>
+ <tile id="468">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_20.png"/>
+ </tile>
+ <tile id="469">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_21.png"/>
+ </tile>
+ <tile id="470">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_22.png"/>
+ </tile>
+ <tile id="471">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_23.png"/>
+ </tile>
+ <tile id="472">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_24.png"/>
+ </tile>
+ <tile id="473">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_25.png"/>
+ </tile>
+ <tile id="474">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_26.png"/>
+ </tile>
+ <tile id="475">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_27.png"/>
+ </tile>
+ <tile id="476">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_28.png"/>
+ </tile>
+ <tile id="477">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_29.png"/>
+ </tile>
+ <tile id="478">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_30.png"/>
+ </tile>
+ <tile id="479">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_31.png"/>
+ </tile>
+ <tile id="480">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_32.png"/>
+ </tile>
+ <tile id="481">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_33.png"/>
+ </tile>
+ <tile id="482">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_34.png"/>
+ </tile>
+ <tile id="483">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_35.png"/>
+ </tile>
+ <tile id="484">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_36.png"/>
+ </tile>
+ <tile id="485">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_37.png"/>
+ </tile>
+ <tile id="486">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_38.png"/>
+ </tile>
+ <tile id="487">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_39.png"/>
+ </tile>
+ <tile id="488">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_40.png"/>
+ </tile>
+ <tile id="489">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_41.png"/>
+ </tile>
+ <tile id="490">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_42.png"/>
+ </tile>
+ <tile id="491">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_43.png"/>
+ </tile>
+ <tile id="492">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_44.png"/>
+ </tile>
+ <tile id="493">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_45.png"/>
+ </tile>
+ <tile id="494">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_46.png"/>
+ </tile>
+ <tile id="495">
+  <image width="50" height="50" source="../../circular_game/cropped/tree_empty_tiles_47.png"/>
  </tile>
 </tileset>
