@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "cycle_tileset.tsx",
+    "activeFile": "tiled-tileset-map.json",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -83,7 +83,7 @@
         },
         "cycle_tileset.tsx": {
             "dynamicWrapping": true,
-            "scaleInDock": 1,
+            "scaleInDock": 0.5,
             "scaleInEditor": 1
         },
         "cycle_tileset_map.tmx": {
@@ -102,8 +102,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 16902,
-                "y": -50
+                "x": 17450,
+                "y": -84
             }
         }
     },
@@ -118,14 +118,15 @@
     "map.width": 10,
     "openFiles": [
         "cycle_tileset.tsx",
-        "cycle_map.tmx"
+        "cycle_map.tmx",
+        "tiled-tileset-map.json"
     ],
     "project": "cycle_game.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "tiled-tileset-map.json",
-        "cycle_map.tmx",
         "cycle_tileset.tsx",
+        "cycle_map.tmx",
+        "tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/tiled-tileset-map.json",
         "/Users/houeland/github.com/houeland/torwasm/wasmpixel/export/cycle_tileset.tsx",
         "cycle_tileset_map.tmx",
